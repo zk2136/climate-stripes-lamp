@@ -1,0 +1,50 @@
+baseURL = 'https://zk2136.github.io/climate-stripes-lamp/'
+languageCode = 'en-us'
+title = 'Site Title'
+theme = 'PaperMod'
+
+[params]
+  math = true
+  ShowPostNavLinks = true
+
+  [params.profileMode]
+    enabled = true
+    title = "Heading"
+    subtitle = "Welcome to this Girls into Coding Climate Warming Stripe LED activity"
+    imageUrl = "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F636197819%2F144577225540%2F1%2Foriginal.20231106-190111?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=74%2C47%2C1849%2C1849&s=8738987cf5375c5ea09a904e4b192052"
+    imageWidth = 120
+    imageHeight = 120
+    imageTitle = "Avatar"
+
+    [[params.profileMode.buttons]]
+      name = "Get Started"
+      url = "posts/"
+
+    [[params.profileMode.buttons]]
+      name = "About Girls into Coding"
+      url = "https://www.girlsintocoding.com/"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)'], ['$', '$']]
+
+# Top Navigation Menu
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "posts"
+    name = "Instructions"
+    url = "/posts/"
+    weight = 20
